@@ -1,7 +1,15 @@
 import { resolve } from 'path'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [],
+  modules: [''],
+  imports: {
+    presets: [
+      {
+        from: '@eonasdan/lz-string',
+        imports: ['compress', 'decompress', 'compressToBase64', 'decompressFromBase64']
+      }
+    ]
+  },
   typescript: {
     shim: false
   },

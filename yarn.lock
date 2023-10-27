@@ -324,6 +324,11 @@
   dependencies:
     mime "^3.0.0"
 
+"@eonasdan/lz-string@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@eonasdan/lz-string/-/lz-string-1.0.3.tgz#859c723b2880c32675df1c79292baee7268825c7"
+  integrity sha512-Bd9Mr85DowIGkKoZFAO8KWMqYv7A694pKqKLthsxqO1oW58yW1t2X90EHYyvFMAveaK8/g9liVWuRTOAuppG/w==
+
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.18.20.tgz#984b4f9c8d0377443cc2dfcef266d02244593622"
