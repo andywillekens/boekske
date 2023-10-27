@@ -142,5 +142,5 @@ export default {
     },
     extend: {}
   },
-  plugins: [formkitPlugin]
+  plugins: [formkitPlugin, require('tailwindcss-3d')]
 }
