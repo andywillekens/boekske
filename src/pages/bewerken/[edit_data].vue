@@ -36,18 +36,30 @@
   </header> -->
   <main class="w-full h-full flex justify-center items-center">
     <!-- Book container -->
-    <div class="w-full max-w-[1408px] h-auto grid grid-cols-2 perspective-[1px]">
+    <div class="w-full max-w-[1408px] h-auto grid grid-cols-2">
       <!-- Cover -->
       {{ bookOpen }}
       <div
-        class="w-full h-[800px] bg-red-950 rounded-r-3xl rounded-l-md col-span-1 col-start-2 transition-all origin-left -rotate-y-12"
-        :class="[bookOpen ? '-rotate-y-180' : '-rotate-y-0']">
-        <button @click="bookOpen = !bookOpen">Klik mij</button>
+        @click="bookOpen = !bookOpen"
+        class="cover w-full h-[800px] bg-red-950 rounded-r-3xl rounded-l-md col-span-1 col-start-1"
+        :class="[bookOpen ? 'open' : 'closed']">
+        <!-- <h1>Helemaal mooi</h1> -->
       </div>
     </div>
   </main>
 </template>
+<style lang="scss">
+  .cover {
+    backface-visibility: hidden;
+  }
+  .open {
+    background-color: purple;
+  }
 
+  .closed {
+    background-color: blue;
+  }
+</style>
 <!-- <NuxtLink :to="{ name: 'bk.view', params: { view_data: route.params.edit_data } }"
       >Bekijken</NuxtLink
     > -->
