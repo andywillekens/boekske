@@ -11,27 +11,32 @@
   const getDataFromURL = decompressFromBase64(route.params.edit_data)
   const book = ref(JSON.parse(getDataFromURL))
 
-  const updateBook = (event: any) => {
-    book.value = JSON.parse(event.target.innerText)
-  }
-
   const updatedBookUrl = computed(() => {
     const bookJSON = JSON.stringify(book.value)
     return compressToBase64(bookJSON)
   })
 
-  watch(updatedBookUrl, (newUrl) => {
+  const updateData = () => {
     router.push({
       name: 'bk.edit',
-      params: { edit_data: newUrl }
+      params: { edit_data: updatedBookUrl.value }
     })
-  })
+  }
 </script>
 
 <template>
-  <h1>Edit boek: {{ book.title }}</h1>
-  {{ book }}
-  <pre @blur="updateBook($event)" contenteditable="true" spellcheck="false">{{ book }}</pre>
+  <h1>{{ book.title }} Bewerken</h1>
+
+  <FormKit
+    v-model="book.title"
+    @blur="updateData"
+    type="text"
+    label="De titel"
+    :validation-messages="{
+      required: 'Titel is verplicht'
+    }"
+    validation="required" />
+
   <NuxtLink :to="{ name: 'bk.view', params: { view_data: route.params.edit_data } }"
     >Bekijken</NuxtLink
   >

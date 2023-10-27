@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [''],
+  modules: ['@formkit/nuxt', '@nuxtjs/tailwindcss'],
   imports: {
     presets: [
       {
@@ -41,5 +41,8 @@ export default defineNuxtConfig({
       autoprefixer: {}
     }
   },
-  css: ['~/assets/styles/tailwind.scss']
+  css: ['~/assets/styles/tailwind.scss'],
+  formkit: {
+    autoImport: true
+  }
 })

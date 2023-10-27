@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+import formkitPlugin from '@formkit/themes/tailwindcss'
+
 export default {
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './app.vue',
+    './*.{ts,js}',
     './error.vue'
   ],
   safelist: [
@@ -140,5 +142,5 @@ export default {
     },
     extend: {}
   },
-  plugins: []
+  plugins: [formkitPlugin]
 }
