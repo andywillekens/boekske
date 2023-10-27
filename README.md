@@ -1,2 +1,8 @@
-# boekske
-Zelf een boekske maken? Geen probleem met deze tool!
+# Boekske
+
+Creating children books and development come together with this tool!
+With boekske you can create a book for others to read and interact with.
+
+### Links
+[Trello board](https://trello.com/b/M1nECTBs/exploring-friday-verhaal-applicatie)
+[Project url (TBA)](#)
